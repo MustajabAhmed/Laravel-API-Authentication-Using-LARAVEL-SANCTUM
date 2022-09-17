@@ -31,7 +31,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'false',
                 'message' => 'Error in saving the data...'
-            ], 500);
+            ], 401);
         }
     }
 
@@ -47,7 +47,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'false',
                 'student' => 'Data not found'
-            ], 500);
+            ], 401);
         }
     }
 
@@ -64,7 +64,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'false',
                 'student' => 'Error in deleting the data...'
-            ], 500);
+            ], 401);
         }
     }
 
@@ -92,7 +92,7 @@ class StudentController extends Controller
             return response()->json([
                 'status' => 'false',
                 'student' => 'Error in updating the data...'
-            ], 500);
+            ], 401);
         }
     }
 }
